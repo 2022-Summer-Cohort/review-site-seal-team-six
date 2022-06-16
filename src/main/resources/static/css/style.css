@@ -1,0 +1,59 @@
+body {
+    background-color: aqua;
+}
+
+.hashtags-body {
+    background-color: aqua;
+}
+
+.link a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+header {
+    color: white;
+    background-color: gray;
+}
+
+.Container {
+    background-color: aqua;
+}
+
+img {
+    
+}
+
+figcaption {
+    position: absolute;
+}
+main {
+    background-color: aqua;
+}
+.whatever-we-wants {
+    background-color: white;
+    border-radius: 10%;
+}
+.CategoryName {
+
+}
+figcaption {
+    background-color: black;
+    color: white;
+}
+figcaption > h2 {
+    text-align: center;
+}
+
+.grid-item {
+    background-color: blueviolet;
+}
+
+.flex-item {
+    color: gray;
+    font-size: 25px;
+    text-align: center;
+    border: solid;
+    padding-top: .5rem;
+    border-radius: 15%;
+}
