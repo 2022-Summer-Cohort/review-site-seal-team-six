@@ -6,7 +6,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 90%;
     height: 100px;
     /* flex-direction: column; */
     margin-bottom: 0;
@@ -16,13 +16,20 @@ header {
     padding-left: 2rem;
     padding-right: 2rem;
 }
+body{
+    align-items: center;
+    height: 100%;
+}
+.header-category{
+    justify-content: left;
+}
 
 header h1 {
     padding-left: 2rem;
 }
 
-.link a {
-    padding-right: 2rem;
+header div{
+ padding-right: 2rem;
 }
 
 h1 {
@@ -39,12 +46,11 @@ main {
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
-    justify-content: center;
     align-items: center;
     width: 70%;
     padding: 1rem 1rem;
+    border-radius: 20%; 
 }
-
 .flex-item {
     height: 3rem;
 }
@@ -58,11 +64,38 @@ main {
     gap: 10px;
 }
 
-img {
-    width: 100%;
-    border-radius: 0%;
+.single-review-container {
+    display:flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 70%;
 }
 
+#review-figure {
+    display:flex;
+    width: 35%;
+    justify-content: space-around;
+    font-size:x-large;
+    align-items:center;
+    margin-bottom: 3rem;
+}
+.stars {
+    display:flex;
+
+}
+.profile-pic{
+    width: 100px;
+}
+.review-title{
+    font-size: x-large;
+}
+img {
+    width: 100%;
+    border-radius: 50%;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
 figure {
     position: relative;
 }
@@ -73,15 +106,37 @@ figcaption {
     bottom: 0px;
     height: 3rem;
     width: 100%;
-
     align-items: center;
 }
-
 .grid-item {
     width: 100%;
+    
 }
-
 .flex-item {
     width: 50%;
     margin-top: .5rem;
+    border-radius: 20px;
+}
+.header-hashtag {
+    justify-content: left;
+    
+}
+.header-hashtags{
+    justify-content:left;
+}
+.header-reviews{
+    justify-content: left;
+}
+.header-review{
+    justify-content: left;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    margin-left: 4rem;
+    margin-right: 2rem;
+    align-items: center;
 }
