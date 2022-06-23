@@ -1,4 +1,6 @@
 package org.wecancoeit.reviews.repos;
 
-public interface CategoryRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface CategoryRepository extends CrudRepository<> {
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+<body>
+    <header class="header-reviews">
+        <div class="back-arrow">
+            <a href="categories.html">&#171;</a>
+        </div>
+        <h1 th:text="${gym.name}" >Gracy's BJJ Reviews</h1>
+    
+    </header>
+    <section class="single-review-container">
+<!--        <figure id="review-figure">-->
+<!--            <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>-->
+<!--            <p th:text="${review.username}" >BJJ_guy_247</pth:>-->
+<!--        -->
+<!--            <div th:replace="fragments.html :: starRating">-->
+<!--                <span class="star-checked">&#9733;</span>-->
+<!--                <span class="star-checked">&#9733;</span>-->
+<!--                <span class="star-checked">&#9733;</span>-->
+<!--                <span class="star">&#9733;</span>-->
+<!--                <span class="star">&#9733;</span>-->
+<!--                </div>-->
+<!--        </figure>-->
+        <div class="review-title">
+            <tr th:each="review : ${reviews}">
+                <td th:text="${review.profPicimgUrl}">18</td>
+                <td th:text="${review.username}">username</td>
+                <td th:text="${review.starRating}">starRating</td>
+                <td th:text="${review.title}">title</td>
+                <td th:text="${review.reviewBody}">reviewBody</td>
+            </tr>
+        </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vel beatae exercitationem error magnam suscipit amet in totam itaque ipsum quam tenetur, minima sint dolore nam quis nisi excepturi dolorum.</p>
+        </div>
+      
+    </section>
+    <section class="single-review-container">
+        <figure id="review-figure">
+            <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>
+            <p>BJJ_guy_247</p>
+        
+            <p class="stars"><span class="star-checked">&#9733;</span>
+                <span class="star-checked">&#9733;</span>
+                <span class="star-checked">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                </p>
+        </figure>
+        <div class="review-title">
+            <h2>"Not bad, but I've seen better spaces."</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vel beatae exercitationem error magnam suscipit amet in totam itaque ipsum quam tenetur, minima sint dolore nam quis nisi excepturi dolorum.</p>
+        </div>
+      
+    </section>
+    <section class="single-review-container">
+        <figure id="review-figure">
+            <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>
+            <p>BJJ_guy_247</p>
+        
+            <p class="stars"><span class="star-checked">&#9733;</span>
+                <span class="star-checked">&#9733;</span>
+                <span class="star-checked">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                </p>
+        </figure>
+        <div class="review-title">
+            <h2>"Not bad, but I've seen better spaces."</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vel beatae exercitationem error magnam suscipit amet in totam itaque ipsum quam tenetur, minima sint dolore nam quis nisi excepturi dolorum.</p>
+        </div>
+      
+    </section>
+</body>
+<footer>
+    <div class = "footer">
+        <p>copyright BDCR ©2022</p>
+    </div> 
+</footer>
+
+</html>

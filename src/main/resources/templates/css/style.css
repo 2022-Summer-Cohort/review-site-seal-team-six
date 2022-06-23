@@ -1,0 +1,50 @@
+body {
+   
+}
+.link a {
+    color: black;
+    font-size: 1.5rem;
+}
+header {
+    color: black;
+    background-color: lightgray;
+}
+figcaption {
+    position: absolute;
+}
+
+figcaption {
+    background-color: black;
+    color: white;
+}
+figcaption > h2 {
+    text-align: center;
+}
+
+.grid-item {
+   
+}
+
+.flex-item {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    border-style: solid;
+    padding-top: .5rem;
+    border-radius: 15%;
+    border-radius: 10%;
+}
+.back-arrow{
+    color: black;
+}
+header div a {
+    text-decoration: none;
+    font-size: 50px;
+    color: white;
+}
+.star-checked {
+    color: orange;
+}
+.footer{
+    background-color: lightgray;
+}

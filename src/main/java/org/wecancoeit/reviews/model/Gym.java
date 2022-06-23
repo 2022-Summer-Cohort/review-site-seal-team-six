@@ -38,5 +38,19 @@ public class Gym {
         return name;
     }
 
+    public String getZipCode() {
+        return zipCode;
+    }
 
+    public Collection<Review> getReviews() {
+        return reviews;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public Hashtag getHashtag() {
+        return hashtag;
+    }
 }

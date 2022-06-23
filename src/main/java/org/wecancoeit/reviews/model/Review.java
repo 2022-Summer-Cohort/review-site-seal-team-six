@@ -19,18 +19,16 @@ public class Review {
     private int starRating;
     @ManyToOne
     private Gym gym;
-    @ManyToMany
-    private Collection<Hashtag> hashtags;
 
 
-    public Review( String title, String username, String reviewBody, int starRating, Gym gym, Hashtag... hashtags) {
+
+    public Review( String title, String reviewBody, int starRating, Gym gym, Hashtag... hashtags) {
 
         this.title = title;
-        this.username = username;
         this.reviewBody = reviewBody;
         this.starRating = starRating;
         this.gym = gym;
-        this.hashtags = Arrays.asList(hashtags);
+
     }
 
     public Review() {
@@ -44,19 +42,20 @@ public class Review {
         return title;
     }
 
-    public String getUsername() {
-        return username;
-    }
 
     public String getReviewBody() {
         return reviewBody;
     }
 
-    public Collection<Hashtag> getHashtags() {
-        return hashtags;
-    }
-
     public int getStarRating() {
         return starRating;
+    }
+
+    public String getReviewerImgUrl() {
+        return reviewerImgUrl;
+    }
+
+    public Gym getGym() {
+        return gym;
     }
 }
