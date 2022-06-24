@@ -22,10 +22,11 @@ public class Gym {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Gym(String name, String zipCode, String imgUrl, Hashtag... hashtags) {
+    public Gym(String name, String zipCode, String imgUrl,Category category, Hashtag... hashtags) {
         this.name = name;
         this.zipCode = zipCode;
         this.imgUrl = imgUrl;
+        this.category = category;
         this.hashtags = Arrays.asList(hashtags);
     }
 

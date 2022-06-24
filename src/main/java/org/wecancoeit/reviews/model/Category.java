@@ -16,7 +16,7 @@ public class Category {
     @OneToMany (mappedBy = "Category")
     private Collection<Gym> gyms;
 
-    public Category(String name, String categoryImgUrl, Collection<Gym> gyms) {
+    public Category(String name, String categoryImgUrl) {
         this.name = name;
         this.categoryImgUrl = categoryImgUrl;
         this.gyms = gyms;

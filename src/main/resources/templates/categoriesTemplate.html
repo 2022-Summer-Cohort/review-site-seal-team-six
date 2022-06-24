@@ -21,7 +21,7 @@
     </header>
     <section class="Container">
         <figure class="grid-item" th:each="category: ${categories}">
-            <a href="/category.html">
+            <a th:href="'/categories/' + ${category.id}">
                 <img th:src="${category.categoryImgUrl}">
                 <figcaption class="CategoryName"><h2 th:text="${category.name}">BJJ</h2></figcaption>
             </a>
