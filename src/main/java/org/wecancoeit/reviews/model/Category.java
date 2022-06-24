@@ -13,7 +13,7 @@ public class Category {
     private long id;
     private String name;
     private String categoryImgUrl;
-    @OneToMany (mappedBy = "Category")
+    @OneToMany (mappedBy = "category")
     private Collection<Gym> gyms;
 
     public Category(String name, String categoryImgUrl) {
