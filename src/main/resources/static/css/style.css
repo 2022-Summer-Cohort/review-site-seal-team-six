@@ -8,9 +8,12 @@ body {
 header {
     color: black;
     background-color: lightgray;
+    border-bottom: solid rgb(178, 178, 178);
 }
-figcaption {
-    position: absolute;
+.grid-item {
+    border:solid rgb(178, 178, 178);
+    border-width: 10px;
+    background-color: rgb(178, 178, 178);
 }
 
 figcaption {
@@ -21,9 +24,6 @@ figcaption > h2 {
     text-align: center;
 }
 
-.grid-item {
-   
-}
 
 .flex-item {
     color: black;
@@ -45,6 +45,7 @@ header div a {
 .star-checked {
     color: orange;
 }
-.footer{
+footer{
     background-color: lightgray;
+    border-top:solid rgb(178, 178, 178);
 }
