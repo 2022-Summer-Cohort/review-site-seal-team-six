@@ -13,18 +13,20 @@ public class Gym {
     private long id;
     private String name;
     private String zipCode;
+    private String imgUrl;
     @OneToMany(mappedBy = "gym")
     private Collection<Review> reviews;
 
     @ManyToOne
     private Category category;
-    @ManyToOne
-    private Hashtag hashtag;
+    @ManyToMany
+    private Collection<Hashtag> hashtags;
 
-    public Gym(long id, String name,String zipCode) {
-        this.id = id;
+    public Gym(String name, String zipCode, String imgUrl, Hashtag... hashtags) {
         this.name = name;
-
+        this.zipCode = zipCode;
+        this.imgUrl = imgUrl;
+        this.hashtags = Arrays.asList(hashtags);
     }
 
     public Gym() {
@@ -41,6 +43,7 @@ public class Gym {
     public String getZipCode() {
         return zipCode;
     }
+    public String getImgUrl() { return imgUrl; }
 
     public Collection<Review> getReviews() {
         return reviews;
@@ -50,7 +53,7 @@ public class Gym {
         return category;
     }
 
-    public Hashtag getHashtag() {
-        return hashtag;
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
     }
 }

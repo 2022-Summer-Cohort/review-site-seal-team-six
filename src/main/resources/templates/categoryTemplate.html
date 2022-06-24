@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -18,24 +19,24 @@
     
     </header>
     <section class="Container">
-        <figure class="grid-item">
-            <a href="#">
-                <img src="/images/BJJ.jpg">
-                <figcaption class="CategoryName"><h2>Gracy's BJJ</h2></figcaption>
+        <figure class="grid-item" th:each="gym: ${gyms}">
+            <a href="/ReviewListTemplate">
+                <img th:src="${gym.imgUrl}">
+                <figcaption class="CategoryName"><h2 th:text="${gym.name">Gracy's BJJ</h2></figcaption>
             </a>
         </figure>
-        <figure class="grid-item">
-            <img src="/images/BJJ.jpg">
-                <figcaption class="CategoryName"><h2>Robson's BJJ</h2></figcaption>
-        </figure>
-        <figure class="grid-item">
-            <img src="/images/BJJ.jpg">
-                <figcaption class="CategoryName"><h2>Edilson's BJJ</h2></figcaption>
-        </figure>
-        <figure class="grid-item">
-            <img src="/images/BJJ.jpg">
-                <figcaption class="CategoryName"><h2>Roboerto's BJJ</h2></figcaption>
-        </figure>
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/BJJ.jpg">-->
+<!--                <figcaption class="CategoryName"><h2>Robson's BJJ</h2></figcaption>-->
+<!--        </figure>-->
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/BJJ.jpg">-->
+<!--                <figcaption class="CategoryName"><h2>Edilson's BJJ</h2></figcaption>-->
+<!--        </figure>-->
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/BJJ.jpg">-->
+<!--                <figcaption class="CategoryName"><h2>Roboerto's BJJ</h2></figcaption>-->
+<!--        </figure>-->
     </section>
 </body>
 <footer>

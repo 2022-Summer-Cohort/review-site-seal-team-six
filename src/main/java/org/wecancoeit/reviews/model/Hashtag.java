@@ -11,10 +11,6 @@ public class Hashtag {
 
     @ManyToMany(mappedBy = "hashtags")
     private Collection<Gym> gyms;
-//    @ManyToMany(mappedBy = "hashtags")
-//    private Collection<Review> reviews;
-
-
 
     public Hashtag(String name) {
         this.name = name;

@@ -8,13 +8,13 @@ import java.util.Collection;
 public class Review {
     @Id
     @GeneratedValue
-
     private long id;
+
+    private String username;
     private String title;
     private String reviewBody;
 
     private String reviewerImgUrl;
-
 
     private int starRating;
     @ManyToOne
@@ -22,10 +22,11 @@ public class Review {
 
 
 
-    public Review( String title, String reviewBody, int starRating, Gym gym, Hashtag... hashtags) {
-
+    public Review(String username, String title, String reviewBody, String reviewerImgUrl, int starRating, Gym gym) {
+        this.username = username;
         this.title = title;
         this.reviewBody = reviewBody;
+        this.reviewerImgUrl = reviewerImgUrl;
         this.starRating = starRating;
         this.gym = gym;
 
@@ -37,6 +38,7 @@ public class Review {
     public long getId() {
         return id;
     }
+    public String getUsername() { return username; }
 
     public String getTitle() {
         return title;

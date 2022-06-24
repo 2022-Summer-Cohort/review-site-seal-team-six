@@ -12,11 +12,13 @@ public class Category {
     @GeneratedValue
     private long id;
     private String name;
+    private String categoryImgUrl;
     @OneToMany (mappedBy = "Category")
     private Collection<Gym> gyms;
 
-    public Category(String name, Collection<Gym> gyms) {
+    public Category(String name, String categoryImgUrl, Collection<Gym> gyms) {
         this.name = name;
+        this.categoryImgUrl = categoryImgUrl;
         this.gyms = gyms;
     }
 
@@ -30,6 +32,8 @@ public class Category {
     public String getName() {
         return name;
     }
+
+    public String getCategoryImgUrl() { return categoryImgUrl; }
 
     public Collection<Gym> getGyms() {
         return gyms;
