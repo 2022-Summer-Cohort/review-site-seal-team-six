@@ -10,7 +10,6 @@ import org.wecancoeit.reviews.repos.GymRepository;
 import javax.persistence.Entity;
 
 @Controller
-@RequestMapping("/categories")
 public class CategoryController {
     private CategoryRepository categoryRepo;
     private GymRepository gymRepo;
@@ -22,12 +21,12 @@ public class CategoryController {
 
     @RequestMapping("/")
     public String showCategories(Model model) {
-        model.addAttribute("allCategories", categoryRepo.findAll());
-        return "allCategories";
+        model.addAttribute("categories", categoryRepo.findAll());
+        return "categoriesTemplate";
     }
     @RequestMapping("/{id}")
     public String showCategory(Model model, @PathVariable long id) {
         model.addAttribute("category", categoryRepo.findById(id).get());
-        return "category";
+        return "categoryTemplate";
     }
 }

@@ -22,11 +22,11 @@ public class GymController {
     @RequestMapping("/")
     public String showGyms(Model model) {
         model.addAttribute("gyms", gymRepo.findAll());
-        return "allGyms";
+        return "hashtagTemplate";
     }
     @RequestMapping("/{id}")
     public String showGym(Model model, @PathVariable Long id) {
         model.addAttribute("gym", gymRepo.findById(id).get());
-        return "gym";
+        return "reviewListTemplate";
     }
     }

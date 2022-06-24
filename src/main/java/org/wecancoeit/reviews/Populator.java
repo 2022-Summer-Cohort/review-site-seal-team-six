@@ -18,8 +18,12 @@ public class Populator implements CommandLineRunner {
     private CategoryRepository categoryRepo;
     private HashtagRepository hashtagRepo;
 
-    public Populator(ReviewRepository reviewRepo) {
+
+    public Populator(ReviewRepository reviewRepo, GymRepository gymRepo, CategoryRepository categoryRepo, HashtagRepository hashtagRepo) {
         this.reviewRepo = reviewRepo;
+        this.gymRepo = gymRepo;
+        this.categoryRepo = categoryRepo;
+        this.hashtagRepo = hashtagRepo;
     }
 
     @Override
@@ -41,7 +45,7 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(hTBJJ);
         hashtagRepo.save(hTBoxing);
         Gym chaeTaeK = new Gym("Chae's Taekwondo","45232", "/images/TaeKwondo.jpg", taekwondo);
-        Gym billBox = new Gym("Bill's Boxing","45232", "/images/Boxing.jpg", boxing);
+        Gym billBox = new Gym("Bill's Boxing","45232", "/images/Boxing.jpeg", boxing);
         Gym chaoKF = new Gym("Chao Kung Fu","45232", "/images/KungFu.jpg", kungFu);
         Gym gracyBJJ = new Gym("Gracy BJJ","45232", "/images/BJJ.jpg",bJJ);
         gymRepo.save(chaeTaeK);
