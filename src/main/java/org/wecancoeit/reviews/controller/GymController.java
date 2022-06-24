@@ -13,9 +13,6 @@ public class GymController {
     private GymRepository gymRepo;
     private ReviewRepository reviewRepo;
 
-    public GymController(GymRepository gymRepo) {
-        this.gymRepo = gymRepo;
-    }
 
     public GymController(GymRepository gymRepo, ReviewRepository reviewRepo) {
         this.gymRepo = gymRepo;
