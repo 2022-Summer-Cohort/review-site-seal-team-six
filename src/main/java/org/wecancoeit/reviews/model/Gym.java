@@ -12,7 +12,6 @@ public class Gym {
     @GeneratedValue
     private long id;
     private String name;
-    private String zipCode;
     private String imgUrl;
     @OneToMany(mappedBy = "gym")
     private Collection<Review> reviews;
@@ -22,9 +21,8 @@ public class Gym {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Gym(String name, String zipCode, String imgUrl,Category category, Hashtag... hashtags) {
+    public Gym(String name, String imgUrl,Category category, Hashtag... hashtags) {
         this.name = name;
-        this.zipCode = zipCode;
         this.imgUrl = imgUrl;
         this.category = category;
         this.hashtags = Arrays.asList(hashtags);
@@ -32,17 +30,11 @@ public class Gym {
 
     public Gym() {
     }
-
     public long getId() {
         return id;
     }
-
     public String getName() {
         return name;
-    }
-
-    public String getZipCode() {
-        return zipCode;
     }
     public String getImgUrl() { return imgUrl; }
 

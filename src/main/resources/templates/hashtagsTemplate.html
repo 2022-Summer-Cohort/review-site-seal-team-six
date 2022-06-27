@@ -22,7 +22,6 @@
     <main>
         <div class="whatever-we-wants" th:each="hashtag: ${hashtags}" >
             <a class="flex-item"  th:href="'/hashtags/' + ${hashtag.id}" th:text="${hashtag.name}">#American</a>
-
         </div>
     </main>
 

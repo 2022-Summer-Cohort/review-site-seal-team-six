@@ -16,15 +16,15 @@
         </div>
         <h1 th:text="${gym.name}" >Gracy's BJJ Reviews</h1>
     </header>
-    <div class="review-title">
-        <tr th:each="review: ${gym.reviews}">
-            <td th:text="${review.profPicimgUrl}">18</td>
-            <td th:text="${review.username}">username</td>
-            <td th:text="${review.starRating}">starRating</td>
-            <td th:text="${review.title}">title</td>
-            <td th:text="${review.reviewBody}">reviewBody</td>
-        </tr>
-    </div>
+<!--    <div class="review-title">-->
+<!--        <tr th:each="review: ${gym.reviews}">-->
+<!--            <td th:text="${review.profPicImgUrl}">18</td>-->
+<!--            <td th:text="${review.username}">username</td>-->
+<!--            <td th:text="${review.starRating}">starRating</td>-->
+<!--            <td th:text="${review.title}">title</td>-->
+<!--            <td th:text="${review.reviewBody}">reviewBody</td>-->
+<!--        </tr>-->
+<!--    </div>-->
     <section class="single-review-container" th:each="review: ${gym.reviews}">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>

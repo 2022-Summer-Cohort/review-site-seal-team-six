@@ -26,4 +26,8 @@ public class Hashtag {
     public String getName() {
         return name;
     }
+
+    public Collection<Gym> getGyms() {
+        return gyms;
+    }
 }

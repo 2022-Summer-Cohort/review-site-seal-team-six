@@ -23,9 +23,9 @@ public class HashtagController {
         model.addAttribute("hashtags", hashtagRepo.findAll());
         return "hashtagsTemplate";
     }
-//    @RequestMapping("/{id}")
-//    public String getHashtagById(Model model, @PathVariable long id) {
-//        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
-//        return "hashtagTemplate";
-//    }
+    @RequestMapping("/{id}")
+    public String getHashtagById(Model model, @PathVariable long id) {
+        model.addAttribute("hashtag", hashtagRepo.findById(id).get());
+        return "hashtagTemplate";
+    }
 }

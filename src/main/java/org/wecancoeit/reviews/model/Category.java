@@ -19,7 +19,6 @@ public class Category {
     public Category(String name, String categoryImgUrl) {
         this.name = name;
         this.categoryImgUrl = categoryImgUrl;
-        this.gyms = gyms;
     }
 
     public Category() {
