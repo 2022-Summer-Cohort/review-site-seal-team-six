@@ -20,14 +20,27 @@
     <section class="single-review-container">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>
+            <section>
             <p>BJJ_guy_247</p>
+            
         
-            <p class="stars"><span class="star-checked">&#9733;</span>
+            <!-- <p class="stars"><span class="star-checked">&#9733;</span>
                 <span class="star-checked">&#9733;</span>
                 <span class="star-checked">&#9733;</span>
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
-                </p>
+                </p> -->
+                <label class="starRating"><strong></strong>
+                    <input
+                      class="rating"
+                      max="5"
+                      oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                      step="0.5"
+                      style="--value:2.5"
+                      type="range"
+                      value="2.5">
+                  </label>
+                </section>
         </figure>
         <div class="review-title">
             <h2>"Not bad, but I've seen better spaces."</h2>

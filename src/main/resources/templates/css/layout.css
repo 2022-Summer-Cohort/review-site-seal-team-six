@@ -2,7 +2,6 @@
     padding: 0px;
     margin: 0px;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -81,7 +80,7 @@ main {
 
 #review-figure {
     display: flex;
-    width: 35%;
+    width: 50%;
     justify-content: space-around;
     font-size: x-large;
     align-items: center;
