@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martial Arts Categories</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <h1>Martial Arts <br>Gym Categories</h1>
+        <div class="link">
+            <a href="/hashtags/">#Hashtags</a>
+        </div>
+    </header>
+    <section class="Container">
+        <figure class="grid-item" th:each="category: ${categories}">
+            <a th:href="'/categories/' + ${category.id}">
+                <img th:src="${category.categoryImgUrl}">
+                <figcaption class="CategoryName"><h2 th:text="${category.name}">BJJ</h2></figcaption>
+            </a>
+        </figure>
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/KungFu.jpeg">-->
+<!--                <figcaption class="CategoryName"><h2>Kung Fu</h2></figcaption>-->
+<!--        </figure>-->
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/Taekwondo.jpg">-->
+<!--                <figcaption class="CategoryName"><h2>Taewondo</h2></figcaption>-->
+<!--        </figure>-->
+<!--        <figure class="grid-item">-->
+<!--            <img src="/images/Boxing.jpg">-->
+<!--                <figcaption class="CategoryName"><h2>Boxing</h2></figcaption>-->
+<!--        </figure>-->
+    </section>
+</body>
+<footer>
+    <div class = "footer">
+        <p>copyright BDCR ©2022</p>
+    </div> 
+</footer>
+
+</html>

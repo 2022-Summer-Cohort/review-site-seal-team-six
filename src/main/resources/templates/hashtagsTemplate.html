@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashtags</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/layout.css">
+</head>
+
+<body class="hashtags-body">
+    <header class="header-hashtags">
+        <div class="back-arrow">
+            <a href="categories.html">&#171;</a>
+        </div>
+        <h1> Martial Arts<br>#Hashtags</h1>
+            
+    </header>
+    <main>
+        <div class="whatever-we-wants" th:each="hashtag: ${hashtags}" >
+            <a class="flex-item"  th:href="'/hashtags/' + ${hashtag.id}" th:text="${hashtag.name}">#American</a>
+
+        </div>
+    </main>
+
+</body>
+<footer>
+    <div class = "footer">
+        <p>copyright BDCR ©2022</p>
+    </div> 
+</footer>
+
+</html>

@@ -1,0 +1,162 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+
+}
+
+body {
+    align-items: center;
+    height: 100%;
+    margin-top: 115px;
+}
+
+.header-category {
+    justify-content: left;
+}
+
+header h1 {
+    padding-left: 2rem;
+}
+
+header div {
+    padding-right: 2rem;
+}
+
+h1 {
+    /* text-align: center; */
+}
+
+main {
+    height: 100%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+/* below references hashtags.html */
+.whatever-we-wants {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    align-items: center;
+    width: 70%;
+    padding: 1rem 1rem;
+    border-radius: 20%;
+}
+
+.flex-item {
+    height: 3rem;
+}
+
+.Container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(2, 1fr); */
+    justify-items: center;
+    margin: 2rem auto;
+    gap: 30px;
+}
+
+.single-review-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 70%;
+}
+
+#review-figure {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: x-large;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.stars {
+    display: flex;
+
+}
+
+.profile-pic {
+    width: 100px;
+}
+
+.review-title {
+    font-size: x-large;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+
+figure {
+    position: relative;
+    border-radius: 15px;
+}
+
+figcaption {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 3rem;
+    width: 100%;
+    align-items: center;
+}
+
+.grid-item {
+    width: 100%;
+
+}
+
+.flex-item {
+    width: 50%;
+    margin-top: .5rem;
+    border-radius: 20px;
+}
+
+.header-hashtag {
+    justify-content: left;
+
+}
+
+.header-hashtags {
+    justify-content: left;
+}
+
+.header-reviews {
+    justify-content: left;
+}
+
+.header-review {
+    justify-content: left;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+    height: 3rem;
+}
