@@ -31,10 +31,16 @@ public class Gym {
     }
     public void updateAvgRating() {
         double sum = 0;
+        double avgRatingRaw = 0;
         for (Review review: reviews) {
             sum += review.getRating();
         }
-        avgRating = sum / reviews.size();
+        avgRatingRaw = sum / reviews.size();
+        if ((avgRatingRaw*10) % 5 == 0) {
+            avgRating =Math.floor((avgRatingRaw*10) / 5) * 5 / 10;
+        } else {
+            avgRating = (Math.floor(((avgRatingRaw*10) / 5) * 5) + 5) / 10;
+        }
     }
     public void addHashtag(Hashtag hashtag) { hashtags.add(hashtag); }
     public void addReview(Review review) { reviews.add(review); }
