@@ -2,14 +2,8 @@ package org.wecancoeit.reviews;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancoeit.reviews.model.Category;
-import org.wecancoeit.reviews.model.Gym;
-import org.wecancoeit.reviews.model.Hashtag;
-import org.wecancoeit.reviews.model.Review;
-import org.wecancoeit.reviews.repos.CategoryRepository;
-import org.wecancoeit.reviews.repos.GymRepository;
-import org.wecancoeit.reviews.repos.HashtagRepository;
-import org.wecancoeit.reviews.repos.ReviewRepository;
+import org.wecancoeit.reviews.model.*;
+import org.wecancoeit.reviews.repos.*;
 
 @Component
 public class Populator implements CommandLineRunner {
@@ -17,6 +11,7 @@ public class Populator implements CommandLineRunner {
     private GymRepository gymRepo;
     private CategoryRepository categoryRepo;
     private HashtagRepository hashtagRepo;
+
 
 
     public Populator(ReviewRepository reviewRepo, GymRepository gymRepo, CategoryRepository categoryRepo, HashtagRepository hashtagRepo) {
@@ -45,21 +40,20 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(hTBJJ);
         hashtagRepo.save(hTBoxing);
         Gym chaeTaeK = new Gym("Chae's Taekwondo", "/images/TaeKwondo.jpg", taekwondo, hTTaekwondo );
-        Gym billBox = new Gym("Bill's Boxing", "/images/Boxing.jpeg", boxing, hTBoxing);
+        Gym billBox = new Gym("Bill's Boxing", "/images/Boxing.jpg", boxing, hTBoxing);
         Gym chaoKF = new Gym("Chao Kung Fu","/images/KungFu.jpeg", kungFu, hTKungFu);
         Gym gracyBJJ = new Gym("Gracy BJJ", "/images/BJJ.jpg",bJJ, hTBJJ);
         gymRepo.save(chaeTaeK);
         gymRepo.save(billBox);
         gymRepo.save(chaoKF);
         gymRepo.save(gracyBJJ);
-        Review review1 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.","/images/profile-pic.jpeg", 2, gracyBJJ);
-        Review review2 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.","/images/profile-pic.jpeg", 2, chaoKF);
-        Review review3 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.","/images/profile-pic.jpeg", 2, billBox);
-        Review review4 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.","/images/profile-pic.jpeg", 2, chaeTaeK);
+        Review review1 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.", 4, gracyBJJ);
+        Review review2 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.", 5, chaoKF);
+        Review review3 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.", 3.5, billBox);
+        Review review4 = new Review("BJJ_Guy_217","I've seen better!","The gym was not clean, and the facilities needed more equipment.", 2.5, chaeTaeK);
         reviewRepo.save(review1);
         reviewRepo.save(review2);
         reviewRepo.save(review3);
         reviewRepo.save(review4);
-
     }
 }

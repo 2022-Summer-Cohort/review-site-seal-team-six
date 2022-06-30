@@ -1,8 +1,6 @@
 package org.wecancoeit.reviews.model;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
-import java.security.PrivateKey;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -13,6 +11,7 @@ public class Gym {
     private long id;
     private String name;
     private String imgUrl;
+    private double avgRating;
     @OneToMany(mappedBy = "gym")
     private Collection<Review> reviews;
 
@@ -30,6 +29,15 @@ public class Gym {
 
     public Gym() {
     }
+    public void updateAvgRating() {
+        double sum = 0;
+        for (Review review: reviews) {
+            sum += review.getRating();
+        }
+        avgRating = sum / reviews.size();
+    }
+    public void addHashtag(Hashtag hashtag) { hashtags.add(hashtag); }
+    public void addReview(Review review) { reviews.add(review); }
     public long getId() {
         return id;
     }
@@ -48,5 +56,9 @@ public class Gym {
 
     public Collection<Hashtag> getHashtags() {
         return hashtags;
+    }
+
+    public double getAvgRating() {
+        return avgRating;
     }
 }

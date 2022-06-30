@@ -13,23 +13,20 @@ public class Review {
     private String username;
     private String title;
     private String reviewBody;
+    private double rating;
 
-    private String reviewerImgUrl;
+    private String reviewerImgUrl = "/images/profile-pic.jpeg";
 
-    private int starRating;
     @ManyToOne
     private Gym gym;
 
 
-
-    public Review(String username, String title, String reviewBody, String reviewerImgUrl, int starRating, Gym gym) {
+    public Review(String username, String title, String reviewBody, double rating, Gym gym) {
         this.username = username;
         this.title = title;
         this.reviewBody = reviewBody;
-        this.reviewerImgUrl = reviewerImgUrl;
-        this.starRating = starRating;
+        this.rating = rating;
         this.gym = gym;
-
     }
 
     public Review() {
@@ -49,15 +46,15 @@ public class Review {
         return reviewBody;
     }
 
-    public int getStarRating() {
-        return starRating;
-    }
-
     public String getReviewerImgUrl() {
         return reviewerImgUrl;
     }
 
     public Gym getGym() {
         return gym;
+    }
+
+    public double getRating() {
+        return rating;
     }
 }
