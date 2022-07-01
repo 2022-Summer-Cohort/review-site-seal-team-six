@@ -11,11 +11,18 @@
 <body>
     <header class="header-reviews">
         <div class="back-arrow">
-            <a href="categories.html">&#171;</a>
+            <a href="#">&#171;</a>
         </div>
-        <h1>Gracy's BJJ Reviews</h1>
-    
+        <h1>Seal Team Six Reviews</h1>
+        <p>Martial Arts Gyms</p>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/hashtags/">#Hashtags</a>
+        </nav>
     </header>
+    <h1 th:text="${gym.name}">Gracy's BJJ</h1>
+    <p th:text="${gym.avgRating}">5.0</p>
     <section class="single-review-container">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>

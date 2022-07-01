@@ -5,14 +5,15 @@
 header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height: 100px;
+    width: 2000px;
+    height: 300px;
     margin-bottom: 0;
+    margin-top: 0%;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    position: fixed;
-    z-index: 9999;
+    position: relative;
+    z-index: 9999; 
     top: 0;
 
 }
@@ -36,7 +37,7 @@ header div {
 }
 
 h1 {
-    /* text-align: center; */
+    text-align: center;
 }
 
 main {
@@ -102,7 +103,7 @@ main {
 
 img {
     width: 100%;
-    border-radius: 15px;
+    /* border-radius: ; */
     float: left;
     width: 100%;
     height: 100%;
@@ -118,12 +119,29 @@ figcaption {
     justify-content: center;
     position: absolute;
     bottom: 0px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    height: 3rem;
+    /* border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
+    height: 2rem;
     width: 100%;
     align-items: center;
 }
+
+/* .Container {
+    display: grid;
+    width: 1000px;
+    height: 4400px;
+} */
+
+/* .row-layout {
+    display: inline-block;
+} */
+
+/* .grid-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    } */
+
+    /* ask about row layout */
 
 .grid-item {
     width: 100%;
@@ -137,12 +155,12 @@ figcaption {
 }
 
 .header-hashtag {
-    justify-content: left;
+    justify-content: right;
 
 }
 
 .header-hashtags {
-    justify-content: left;
+    justify-content: right;
 }
 
 .header-reviews {

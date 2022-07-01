@@ -1,5 +1,6 @@
 body {
-   
+   background-color: rgb(46, 45, 45);
+   font-family: 'WorkSans', sans-serif;
 }
 .rating {
     --dir: right;
@@ -52,18 +53,33 @@ body {
     margin-block-end: 1rem;
   } */
 
-.link a {
-    color: black;
+.links {
+    color: rgb(0, 0, 0);
     font-size: 1.5rem;
+    /* z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: auto; */
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+
 }
-header {
-    color: black;
-    background-color: lightgray;
-    border-bottom: solid rgb(178, 178, 178);
-}
+/* header { */
+    /* color: black; */
+    /* background-color: rgb(151, 52, 52); */
+    /* background-image: url('/images/ST6.jpeg'); */
+    /* border-bottom: solid rgb(178, 178, 178); */
+/* } */
+
 .grid-item {
-    border:solid rgb(178, 178, 178);
-    border-width: 10px;
+    border-radius: 0%;
+    border:solid rgb(255, 255, 255);
+    border-width: 5px;
     background-color: rgb(178, 178, 178);
 }
 
@@ -76,17 +92,19 @@ figcaption > h2 {
 }
 
 
+
+
 .flex-item {
     color: black;
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
     border-style: solid;
     padding-top: .5rem;
-    border-radius: 15%;
-    border-radius: 10%;
+    /* border-radius: 15%; */
+    /* border-radius: 10%; */
 }
 .back-arrow{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 header div a {
     text-decoration: none;
