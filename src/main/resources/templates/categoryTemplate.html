@@ -13,14 +13,17 @@
 <body>
     <header class="header-category">
         <div class="back-arrow">
-            <a href="categories.html">&#171;</a>
+            <a href="#">&#171;</a>
         </div>
-        <h1 th:text="${category.name}">Brazilian Jiu Jitsu</h1>
+        <h1>Seal Team Six Reviews</h1>
+        <p>Martial Arts Gyms</p>
         <div class="link">
+            <a href="/">Home</a>
             <a href="/hashtags/">#Hashtags</a>
         </div>
     
     </header>
+    <h1 th:text="${category.name}">Brazilian Jiu Jitsu</h1>
     <section class="Container">
         <figure class="grid-item" th:each="gym: ${category.gyms}">
             <a th:href="'/gyms/' + ${gym.id}">

@@ -13,20 +13,18 @@
 <body>
     <header class="header-reviews">
         <div class="back-arrow">
-            <a href="categories.html">&#171;</a>
+            <a href="#">&#171;</a>
         </div>
-        <h1 th:text="${gym.name}">Gracy's BJJ Reviews</h1>
-        <p th:text="${gym.avgRating}"></p>
+        <h1>Seal Team Six Reviews</h1>
+        <p>Martial Arts Gyms</p>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/hashtags/">#Hashtags</a>
+        </nav>
     </header>
-    <!--    <div class="review-title">-->
-    <!--        <tr th:each="review: ${gym.reviews}">-->
-    <!--            <td th:text="${review.profPicImgUrl}">18</td>-->
-    <!--            <td th:text="${review.username}">username</td>-->
-    <!--            <td th:text="${review.starRating}">starRating</td>-->
-    <!--            <td th:text="${review.title}">title</td>-->
-    <!--            <td th:text="${review.reviewBody}">reviewBody</td>-->
-    <!--        </tr>-->
-    <!--    </div>-->
+    <h1 th:text="${gym.name}">Gracy's BJJ</h1>
+    <p th:text="${gym.avgRating}"></p>
     <section class="single-review-container" th:each="review: ${gym.reviews}">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>

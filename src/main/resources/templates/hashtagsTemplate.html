@@ -14,11 +14,15 @@
 <body class="hashtags-body">
     <header class="header-hashtags">
         <div class="back-arrow">
-            <a href="categories.html">&#171;</a>
+            <a href="#">&#171;</a>
         </div>
-        <h1> Martial Arts<br>#Hashtags</h1>
-            
+        <h1>Seal Team Six Reviews</h1>
+        <p>Martial Arts Gyms</p>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
     </header>
+    <h1>#Hashtags</h1>
     <main>
         <div class="whatever-we-wants" th:each="hashtag: ${hashtags}" >
             <a class="flex-item"  th:href="'/hashtags/' + ${hashtag.id}" th:text="${hashtag.name}">#American</a>

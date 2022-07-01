@@ -14,11 +14,15 @@
 
 <body>
     <header class="header">
-        <h1>Martial Arts <br>Gym Categories</h1>
-        <div class="link">
+        
+
+        <h1>Seal Team Six Reviews</h1>
+        <p>Martial Arts Gyms</p>
+        <nav class="links">
             <a href="/hashtags/">#Hashtags</a>
-        </div>
+        </nav>
     </header>
+    <h1>Categories</h1>
     <section class="Container">
         <figure class="grid-item" th:each="category: ${categories}">
             <a th:href="'/categories/' + ${category.id}">
