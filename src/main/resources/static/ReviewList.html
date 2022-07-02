@@ -23,10 +23,11 @@
             <a href="/">Home</a>
             <a href="/hashtags/">#Hashtags</a>
         </nav>
-        
     </header>
-    <h2 th:text="${gym.name}">Gracy's BJJ</h2>
-    <p th:text="${gym.avgRating}">5.0</p>
+
+    <h1 class="page-title" th:text="${gym.name}">Gracy's BJJ</h1>
+    <br>
+    <p id="five-star-rating" th:text="${gym.avgRating}">AVERAGE RATING: 3.0</p>
     <section class="single-review-container">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>
@@ -91,7 +92,7 @@
 </body>
 <footer>
     <div class="footer">
-        <p>copyright BDCR ©2022</p>
+        <p>copyright ST6 REVIEWS ©2022</p>
     </div>
 </footer>
 

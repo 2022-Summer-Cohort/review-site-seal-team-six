@@ -131,6 +131,16 @@ nav a:hover::before{
   font-family: 'Big Shoulders Stencil Display', cursive, Arial, Helvetica, sans-serif;
 } */
 
+.page-title{
+  font-family: 'Big Shoulders Stencil Display', cursive, Arial, Helvetica, sans-serif;
+  font-size: 60px;
+}
+
+#five-star-rating {
+  text-align: center;
+  font-family: 'Big Shoulders Stencil Display', cursive, Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
 .grid-item {
   border-radius: 0%;
   /* border: solid rgb(255, 255, 255);
