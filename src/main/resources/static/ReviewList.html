@@ -89,6 +89,36 @@
         </div>
 
     </section>
+    <br>
+    <br>
+
+    <section class="form">
+        <form th:action="'/gyms/' + ${gym.id} + '/addReview'" method="post">
+            <div>
+                <h2>Leave a Review!</h2>
+                <br>
+            </div>
+            <div>
+                <input placeholder="Username" type="text" name="userName">
+            </div>
+            <div>
+                <input id="rating-stars" class="rating" min="0" max="5" oninput="this.style.setProperty('--value', this.value)" step="0.5"
+                    type="range" value="1" name="rating">
+            </div>
+            <div>
+                <input placeholder="Hashtag" type="text" name="hashtag" id="hashtagID">
+            </div>
+            <div>
+                <input placeholder="Title Your Review" type="text" name="title" id="titleID">
+            </div>
+            <div>
+                <textarea placeholder="Write Your Review" name="reviewBody" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <input id="submit" type="submit" value="Submit" />
+            </div>
+        </form>
+    </section>
 </body>
 <footer>
     <div class="footer">

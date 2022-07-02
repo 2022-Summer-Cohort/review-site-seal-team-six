@@ -5,32 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title th:text="${gym.name}">Document</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 
 <body>
-    <header class="header-reviews">
-        <div class="back-arrow">
-            <a href="#">&#171;</a>
+    <header class="header">
+        <div class="logo">
+            <p id="ST6">ST6</p>
+            <p id="REVIEWS">REVIEWS</p>
         </div>
-        <h1>Seal Team Six Reviews</h1>
-        <p>Martial Arts Gyms</p>
+        <h1>MARTIAL ARTS GYMS</h1>
+        <figure></figure>
 
-        <nav>
+        <nav class="links">
             <a href="/">Home</a>
             <a href="/hashtags/">#Hashtags</a>
         </nav>
     </header>
-    <h1 th:text="${gym.name}">Gracy's BJJ</h1>
-    <p th:text="${gym.avgRating}"></p>
+    <h1 class="page-title" th:text="${gym.name}">Gracy's BJJ</h1>
+    <br>
+    <p id="five-star-rating" th:text="'AVERAGE RATING: ' + ${gym.avgRating} + ' / 5.0'"></p>
+    <br>
+    <br>
     <section class="single-review-container" th:each="review: ${gym.reviews}">
         <figure id="review-figure">
             <div class="profile-pic"><img src="/images/profile-pic.jpeg"></div>
             <div class="user-and-rating">
                 <p th:text="${review.username}">BJJ_guy_247</p>
-                <p th:text="${review.rating}"></p>
+                <p th:text="'Rating: ' + ${review.rating} + ' / 5.0'"></p>
             </div>
         </figure>
         <div class="review-title">
@@ -40,27 +44,35 @@
                 quis nisi excepturi dolorum.</p>
         </div>
     </section>
-    <form class="form" th:action="'/gyms/' + ${gym.id} + '/addReview'" method="post">
-        <div>
-        <input placeholder="Username" type="text" name="userName">
-        </div>
-        <div>
-        <input class="rating" min="0" max="5" oninput="this.style.setProperty('--value', this.value)" step="0.5" type="range"
-            value="1" name="rating">
-        </div>
-        <div>
-        <input placeholder="Hashtag" type="text" name="hashtag" id="hashtagID">
-        </div>
-        <div>
-            <input placeholder="Title Your Review" type="text" name="title" id="titleID">
-        </div>
-        <div>
-            <textarea placeholder="Write Your Review" name="reviewBody" rows="4" cols="50"></textarea>
-        </div>
-        <div>
-        <input type="submit" value="Submit"/>
-        </div>
-    </form>
+    <br>
+    <br>
+    <section class="form">
+        <form th:action="'/gyms/' + ${gym.id} + '/addReview'" method="post">
+            <div>
+                <h2>Leave a Review!</h2>
+                <br>
+            </div>
+            <div>
+                <input placeholder="Username" type="text" name="userName">
+            </div>
+            <div>
+                <input class="rating" min="0" max="5" oninput="this.style.setProperty('--value', this.value)" step="0.5" type="range"
+                    value="1" name="rating">
+            </div>
+            <div>
+                <input placeholder="Hashtag" type="text" name="hashtag" id="hashtagID">
+            </div>
+            <div>
+                <input placeholder="Title Your Review" type="text" name="title" id="titleID">
+            </div>
+            <div>
+                <textarea placeholder="Write Your Review" name="reviewBody" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <input id="submit" type="submit" value="Submit"/>
+            </div>
+        </form>
+    </section>
 </body>
 <footer>
     <div class="footer">

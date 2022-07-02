@@ -6,24 +6,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
+    <title th:text="${category.name}">Category</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
-    <header class="header-category">
-        <div class="back-arrow">
-            <a href="#">&#171;</a>
+    <header class="header">
+        <div class="logo">
+            <section>
+                <p id="ST6">ST6</p>
+                <p id="REVIEWS">REVIEWS</p>
+            </section>
         </div>
-        <h1>Seal Team Six Reviews</h1>
-        <p>Martial Arts Gyms</p>
-        <div class="link">
+        <h1>MARTIAL ARTS GYMS</h1>
+        <figure></figure>
+
+        <nav class="links">
             <a href="/">Home</a>
             <a href="/hashtags/">#Hashtags</a>
-        </div>
-    
+        </nav>
     </header>
-    <h1 th:text="${category.name}">Brazilian Jiu Jitsu</h1>
+    <h1 class="page-title" th:text="${category.name}">Brazilian Jiu Jitsu</h1>
     <section class="Container">
         <figure class="grid-item" th:each="gym: ${category.gyms}">
             <a th:href="'/gyms/' + ${gym.id}">
@@ -35,7 +38,7 @@
 </body>
 <footer>
     <div class = "footer">
-        <p>copyright BDCR ©2022</p>
+        <p>copyright ST6 REVIEWS ©2022</p>
     </div> 
 </footer>
 </html>

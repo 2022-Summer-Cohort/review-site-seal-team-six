@@ -13,16 +13,22 @@
 </head>
 
 <body>
-    <header class="header">
-        
+<header class="header">
+    <div class="logo">
+        <section>
+            <p id="ST6">ST6</p>
+            <p id="REVIEWS">REVIEWS</p>
+        </section>
+    </div>
+    <h1>MARTIAL ARTS GYMS</h1>
+    <figure></figure>
 
-        <h1>Seal Team Six Reviews</h1>
-        <p>Martial Arts Gyms</p>
-        <nav class="links">
-            <a href="/hashtags/">#Hashtags</a>
-        </nav>
-    </header>
-    <h1>Categories</h1>
+    <nav class="links">
+        <a href="/hashtags/">#Hashtags</a>
+    </nav>
+</header>
+<div class="row-layout">
+    <h1 class="page-title">Categories</h1>
     <section class="Container">
         <figure class="grid-item" th:each="category: ${categories}">
             <a th:href="'/categories/' + ${category.id}">
@@ -30,23 +36,12 @@
                 <figcaption class="CategoryName"><h2 th:text="${category.name}">BJJ</h2></figcaption>
             </a>
         </figure>
-<!--        <figure class="grid-item">-->
-<!--            <img src="/images/KungFu.jpeg">-->
-<!--                <figcaption class="CategoryName"><h2>Kung Fu</h2></figcaption>-->
-<!--        </figure>-->
-<!--        <figure class="grid-item">-->
-<!--            <img src="/images/Taekwondo.jpg">-->
-<!--                <figcaption class="CategoryName"><h2>Taewondo</h2></figcaption>-->
-<!--        </figure>-->
-<!--        <figure class="grid-item">-->
-<!--            <img src="/images/Boxing.jpg">-->
-<!--                <figcaption class="CategoryName"><h2>Boxing</h2></figcaption>-->
-<!--        </figure>-->
     </section>
+</div>
 </body>
 <footer>
     <div class = "footer">
-        <p>copyright BDCR ©2022</p>
+        <p>copyright ST6 REVIEWS ©2022</p>
     </div> 
 </footer>
 

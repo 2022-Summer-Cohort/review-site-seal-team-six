@@ -87,18 +87,14 @@ main {
     justify-content: center;
 }
 /* below references hashtags.html */
-.whatever-we-wants {
+.hashtag-list {
     display: flex;
     flex-direction: column;
     margin: 1rem auto;
     align-items: center;
     width: 70%;
     padding: 1rem 1rem;
-    border-radius: 20%;
-}
-
-.flex-item {
-    height: 3rem;
+    /* border-radius: 20%; */
 }
 
 .Container {
@@ -193,7 +189,12 @@ figcaption {
     border-radius: 20px;
 }
 
-.header-hashtag {
+.form {
+    margin-left: 15%;
+    margin-bottom: 7%;
+}
+
+/* .header-hashtag {
     justify-content: right;
 
 }
@@ -208,7 +209,7 @@ figcaption {
 
 .header-review {
     justify-content: left;
-}
+} */
 
 .footer {
     display: flex;

@@ -24,8 +24,8 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Category taekwondo = new Category("Taekwondo", "/images/TaeKwondo.jpg");
-        Category kungFu = new Category("Kung Fu", "/images/KungFu.jpeg");
-        Category bJJ = new Category("BJJ", "/images/BJJ.jpg");
+        Category kungFu = new Category("Kung Fu", "/images/newkungfu.jpg");
+        Category bJJ = new Category("BJJ", "/images/bjj2.jpg");
         Category boxing = new Category("Boxing", "/images/Boxing.jpg");
         categoryRepo.save(taekwondo);
         categoryRepo.save(kungFu);
@@ -41,8 +41,8 @@ public class Populator implements CommandLineRunner {
         hashtagRepo.save(hTBoxing);
         Gym chaeTaeK = new Gym("Chae's Taekwondo", "/images/TaeKwondo.jpg", taekwondo, hTTaekwondo );
         Gym billBox = new Gym("Bill's Boxing", "/images/Boxing.jpg", boxing, hTBoxing);
-        Gym chaoKF = new Gym("Chao Kung Fu","/images/KungFu.jpeg", kungFu, hTKungFu);
-        Gym gracyBJJ = new Gym("Gracy BJJ", "/images/BJJ.jpg",bJJ, hTBJJ);
+        Gym chaoKF = new Gym("Chao Kung Fu","/images/newkungfu.jpg", kungFu, hTKungFu);
+        Gym gracyBJJ = new Gym("Gracy BJJ", "/images/bjj2.jpg",bJJ, hTBJJ);
         gymRepo.save(chaeTaeK);
         gymRepo.save(billBox);
         gymRepo.save(chaoKF);
